@@ -21,6 +21,10 @@ describe 'it-job-watch-cookbook-environment::default' do
     end
 
     it 'should create a Downloads folder' do
+      expect(chef_run).to create_directory '/home/ubuntu/Downloads'
+    end
+
+    it 'should create a Downloads folder' do
       expect(chef_run).to create_directory '/home/vagrant/Downloads'
     end
 

@@ -20,11 +20,6 @@ describe package 'python3-pip' do
   it { should be_installed }
 end
 
-
-describe directory '/home/vagrant/Downloads' do
-  it {should exist}
-end
-
 describe file('/usr/local/lib/python3.6/dist-packages/atomicwrites') do
   it { should exist }
 end

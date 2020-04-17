@@ -34,12 +34,12 @@ bash 'install_requirements' do
   EOH
 end
 
-# directory '/home/ubuntu/Downloads' do
-#   owner 'root'
-#   group 'root'
-#   mode '0777'
-#   action :create
-# end
+directory '/home/ubuntu/Downloads' do
+  owner 'root'
+  group 'root'
+  mode '0777'
+  action :create
+end
 
 directory '/home/vagrant/Downloads' do
   owner 'root'
