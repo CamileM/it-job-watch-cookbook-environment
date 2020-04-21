@@ -20,6 +20,10 @@ describe 'it-job-watch-cookbook-environment::default' do
       expect(chef_run).to install_package 'python3-pip'
     end
 
+    it 'should include packer' do
+      expect(chef_run).to install_package 'packer'
+    end
+
     # it 'should create a Downloads folder' do
     #   expect(chef_run).to create_directory '/home/ubuntu/Downloads'
     # end

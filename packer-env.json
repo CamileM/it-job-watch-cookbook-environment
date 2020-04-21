@@ -30,7 +30,7 @@
     },
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
-    "ami_name": "camile_it_job_watch_2{{timestamp}}"
+    "ami_name": "camile_it_job_watch{{timestamp}}"
   }],
   "provisioners": [
     {
