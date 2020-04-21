@@ -12,7 +12,11 @@ package 'python3-pip'
 
 package 'packer'
 
-package 'chefdk'
+bash 'install_java' do
+  code <<-EOH
+    sudo apt-get -y install default-jdk default-jre
+    EOH
+end
 
 bash 'install chef' do
   code <<-EOL
@@ -20,12 +24,6 @@ bash 'install chef' do
   sudo dpkg -i chef-workstation_*.deb
   rm chef-workstation_*.deb
   EOL
-end
-
-bash 'install_java' do
-  code <<-EOH
-    sudo apt-get -y install default-jdk default-jre
-    EOH
 end
 
 bash 'install_requirements' do
@@ -59,7 +57,7 @@ end
 #   action :create
 # end
 
-directory '/home/vagrant/Downloads' do
+directory '/home/ubuntu/Downloads' do
   owner 'root'
   group 'root'
   mode '0777'
